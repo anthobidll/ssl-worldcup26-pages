@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 信息与回顾</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f1eb;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            color: #2e2b28;
+            line-height: 1.75;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 840px;
+            margin: 0 auto;
+            background: #fcfaf7;
+            padding: 2.5rem 2rem 3rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ddd6cc;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.8rem;
+            color: #3d352e;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin: 2.2rem 0 1rem 0;
+            color: #4d433b;
+            border-left: 3px solid #bcafa4;
+            padding-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            text-align: justify;
+        }
+
+        a {
+            color: #7a5f4a;
+            text-decoration: none;
+            border-bottom: 1px dotted #b8a99b;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #4d3628;
+            border-bottom: 1px solid #7a5f4a;
+        }
+
+        .quiet-note {
+            background: #efe9e2;
+            padding: 1.2rem 1.6rem;
+            border-radius: 14px;
+            margin: 1.8rem 0;
+            font-size: 0.95rem;
+            border-left: 4px solid #b8a18c;
+        }
+
+        .quiet-note strong {
+            font-weight: 500;
+            color: #4b3b30;
+        }
+
+        .dir-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin: 1.8rem 0 2rem;
+        }
+
+        .dir-item {
+            background: #f7f3ed;
+            padding: 1rem 1.2rem;
+            border-radius: 14px;
+            border: 1px solid #e5dbd1;
+            transition: background 0.15s;
+        }
+
+        .dir-item:hover {
+            background: #efe7dd;
+        }
+
+        .dir-item .label {
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            color: #7c6b5c;
+            text-transform: uppercase;
+        }
+
+        .dir-item .subject {
+            font-size: 1.25rem;
+            margin-top: 0.2rem;
+            font-weight: 400;
+            color: #3d352e;
+        }
+
+        blockquote {
+            background: #f3eee8;
+            padding: 1.2rem 1.6rem;
+            border-radius: 14px;
+            margin: 1.8rem 0;
+            font-style: normal;
+            border-left: 4px solid #c8b8a8;
+            color: #3f3730;
+        }
+
+        blockquote p {
+            margin-bottom: 0.5rem;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #7a6a5b;
+        }
+
+        .faq-abbr {
+            margin: 2rem 0 1.5rem;
+            padding: 0.6rem 0;
+        }
+
+        .faq-abbr dt {
+            font-weight: 500;
+            margin-top: 1.2rem;
+            margin-bottom: 0.3rem;
+            color: #4b3b30;
+        }
+
+        .faq-abbr dd {
+            margin-left: 0.2rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd3c8;
+            color: #4f443a;
+        }
+
+        .related {
+            background: #f3eee8;
+            padding: 1.5rem 1.8rem;
+            border-radius: 18px;
+            margin: 2.2rem 0 1.2rem;
+        }
+
+        .related h3 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #4f4035;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .related ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .related li {
+            padding: 0.4rem 0;
+            border-bottom: 1px dashed #ddd3c8;
+        }
+
+        .related li:last-child {
+            border-bottom: none;
+        }
+
+        .related li a {
+            border-bottom: none;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e1d6cb;
+            margin: 2.2rem 0 1.2rem;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #7d6f62;
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e3d9ce;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .dir-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>世界杯 · 另一种入口</h1>
+
+    <p>
+        有些页面，你会在赛程间隙反复返回；有些收藏，则更像一个安静的坐标——知道它在那里，便觉得安心。<a href="https://ssl--worldcup26.com">世界杯</a>的线上位置，很多时候就是这样一种存在：不是每次打开都需要目的，但每一次重新回到，都会发现信息流中又多了一层脉络。
+    </p>
+
+    <p>
+        本篇更像一个轻量级的笔记本，将相关线索、提醒和常用的知识区块集中在一处。如果你也习惯在赛事周期里持续关注，或许会觉得这样的目录感恰好合适。
+    </p>
+
+    <div class="quiet-note">
+        <strong>📌 再次访问的提醒</strong><br>
+        浏览器收藏夹里的链接，常常在不知不觉中过期。如果你曾将某个世界杯页面加入书签，不妨花几秒钟确认它是否仍指向有效的地址。保持收藏的鲜活，也是保持信息触达的一种方式。
+    </div>
+
+    <h2>🧭 信息版块速览</h2>
+    <div class="dir-grid">
+        <div class="dir-item">
+            <div class="label">赛历 · 备忘</div>
+            <div class="subject">阶段与日期</div>
+        </div>
+        <div class="dir-item">
+            <div class="label">队伍 · 档案</div>
+            <div class="subject">参赛国简录</div>
+        </div>
+        <div class="dir-item">
+            <div class="label">场地 · 笔记</div>
+            <div class="subject">举办城市</div>
+        </div>
+        <div class="dir-item">
+            <div class="label">数据 · 回溯</div>
+            <div class="subject">历届决赛</div>
+        </div>
+    </div>
+
+    <p>
+        上面只是一个简单的索引示意。实际的内容深度往往超出目录本身——比如当你在<a href="https://ssl--worldcup26.com">世界杯</a>页面停留更久，会发现一些细碎的统计、裁判名单或天气信息也被整理成可读的条目。这些细节不太起眼，却恰好构成了持续关注者的日常。
+    </p>
+
+    <h2>📎 关于收藏与返回</h2>
+    <p>
+        我认识的一些人会专门为世界杯建立一个书签文件夹，里面混杂着官方公告、赛程图、甚至某篇深度战术分析。这个习惯在非大赛年份几乎休眠，但每到赛事临近，文件夹又被迅速唤醒。<strong>收藏的本质或许不是存储，而是预留一条回来的路。</strong>
+    </p>
+    <p>
+        所以这里没有花哨的倒计时或动态特效，只有白底米色上的文字、引用和链接。它更接近一本随时可以翻开、合上、再翻开的册子。
+    </p>
+
+    <blockquote>
+        <p>“再次访问一个页面，和再次翻开同一本书有相似之处——你知道内容的大致轮廓，但每次重读都会注意到上次忽略的句子。”</p>
+        <cite>—— 一位关注者写在论坛回复里</cite>
+    </blockquote>
+
+    <h2>💬 常见话题 · 简要摘录</h2>
+    <dl class="faq-abbr">
+        <dt>赛程表一般什么时候更新？</dt>
+        <dd>官方通常提前半年左右发布完整赛程，但预选赛阶段的日期会更早确定。如果你希望第一时间拿到日历文件，可以留意<a href="https://ssl--worldcup26.com">世界杯</a>页面的公告区。</dd>
+
+        <dt>以前的比赛录像还能找到吗？</dt>
+        <dd>部分平台保留了近三届的完整回放，但链接时常变动。最稳妥的方式是留意相关存档页的备注，通常会有镜像或替代入口说明。</dd>
+
+        <dt>为什么需要收藏多个页面？</dt>
+        <dd>单一页面在高峰期可能因为流量或维护而暂时不可用。手边保留两到三个不同来源的链接（包括<a href="https://ssl--worldcup26.com">世界杯</a>本身），可以大大减少信息中断的概率。</dd>
+    </dl>
+
+    <div class="related">
+        <h3>📂 相关信息区</h3>
+        <ul>
+            <li><a href="https://ssl--worldcup26.com">世界杯</a> · 主信息聚合</li>
+            <li>国际足联官方公告与媒体中心（外部链接，建议单独收藏）</li>
+            <li>历届决赛数据手册（PDF 版本，部分页面提供离线下载）</li>
+            <li>志愿者与球迷指南 · 常见问题汇编</li>
+        </ul>
+    </div>
+
+    <hr>
+    <p style="font-size: 0.92rem;">
+        本页不是一个门户，而更像一个安静的阅览桌。你可以把它加入书签，也可以在需要时直接搜索回来。如果未来某天再次打开，发现内容已经有微调或新增，那说明有人在持续整理——这正是收藏最值得保留的部分。
+    </p>
+
+    <div class="footer-note">
+        页面内容仅作信息梳理 · 2026 相关动态请以官方渠道为准
+    </div>
+
+</div>
+</body>
+</html>
